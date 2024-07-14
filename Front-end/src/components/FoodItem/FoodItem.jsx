@@ -13,14 +13,14 @@ function FoodItem({ name, id, category, price, desc, img }) {
       </div>
       {!cartItem[id] ? (
         <img
-          className=" -mt-16 ml-[16rem] cursor-pointer  "
+          className=" -mt-16 ml-[16rem] h-12 cursor-pointer  "
           onClick={() => addToCart(id)}
           src={assets.add_icon_white}
         />
       ) : (
-        <div className="flex cursor-pointer  absolute bg-white items-center -mt-16 ml-[12.5rem] gap-3 w-[130px] p-2 rounded-full">
+        <div className="flex cursor-pointer absolute bg-white items-center -mt-16 ml-[12.5rem] gap-3 w-[130px] p-2 rounded-full">
           <img
-            className=""
+            className="h-8 "
             onClick={() => removeFromCart(id)}
             src={assets.remove_icon_red}
           />
@@ -28,7 +28,7 @@ function FoodItem({ name, id, category, price, desc, img }) {
             {cartItem[id]}
           </h1>
           <img
-            className=" "
+            className=" h-8 "
             onClick={() => addToCart(id)}
             src={assets.add_icon_green}
           />
