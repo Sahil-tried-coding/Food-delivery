@@ -6,7 +6,7 @@ function FoodDisplay({category}) {
 // 1:33:26
   let {food_list}=useContext(StoreContext)
   return (
-    <div className="w-full ">
+    <div id="view-menu" className="w-full ">
       <h1 className="text-3xl font-bold">Top dishes Near you !</h1>
       <div className="sm:grid sm:grid-cols-3 sm:gap-5 ">
         {food_list.map((item, index) => {
