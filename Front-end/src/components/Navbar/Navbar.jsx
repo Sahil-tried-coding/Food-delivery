@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { assets } from "../../assets/assets"
 import "./Navbar.css"
+import { Link } from "react-router-dom"
 function Navbar() {
 
     const[menu,setMenu]=useState("home")
@@ -14,10 +15,10 @@ function Navbar() {
 
         {/* ui */}
         <ul className="sm:flex hidden items-center gap-5 text-lg">
-            <li onClick={()=>{setMenu("home")}} className={menu==="home"?"active":""}>Home</li>
-            <li onClick={()=>{setMenu("menu")}} className={menu==="menu"?"active":""}>menu</li>
-            <li onClick={()=>{setMenu("mobile-app")}} className={menu==="mobile-app"?"active":""}>mobile-app</li>
-            <li onClick={()=>{setMenu("contact-us")}} className={menu==="contact-us"?"active":""}>contact-us</li>
+            <Link to="/" onClick={()=>{setMenu("home")}} className={menu==="home"?"active":""}>Home</Link>
+            <a href="#explore_menu" onClick={()=>{setMenu("menu")}} className={menu==="menu"?"active":""}>menu</a>
+            <a href="#mobile-app" onClick={()=>{setMenu("mobile-app")}} className={menu==="mobile-app"?"active":""}>mobile-app</a>
+            <a href="#footer" onClick={()=>{setMenu("contact-us")}} className={menu==="contact-us"?"active":""}>contact-us</a>
         </ul>
         {/* right */}
         <div className="flex mt-3 h-6 gap-3 sm:gap-5">

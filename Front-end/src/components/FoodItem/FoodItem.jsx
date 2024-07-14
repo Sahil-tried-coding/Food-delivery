@@ -36,7 +36,7 @@ function FoodItem({ name, id, category, price, desc, img }) {
       )}
       <div className="flex flex-col gap-3  p-5 pt-3">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-poppins font-semibold">{name}</h2>
+          <h2 className="text-xl font-poppins pt-3 font-semibold">{name}</h2>
           <img className="w-[5rem] h-[1rem]" src={assets.rating_starts} />
         </div>
         <p className="text-base font-light">{desc}</p>
