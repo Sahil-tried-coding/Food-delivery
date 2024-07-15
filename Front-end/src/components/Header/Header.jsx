@@ -5,11 +5,11 @@ function Header() {
   return (
     <div
       className=" mt-16 
-     w-full"
+     w-full  "
     >
       <img
         src={img}
-        className="object-conatian header-img sm:h-[60vh] h-[20vh]  relative w-full"
+        className="object-conatian header-img sm:h-[60vh] h-[20vh]  relative  w-full"
       ></img>
       <h1 className="absolute top-[7rem] text-white font-bold text-2xl left-16 sm:text-6xl sm:top-[12rem] sm:left-[17rem]">
         Order your favourite
