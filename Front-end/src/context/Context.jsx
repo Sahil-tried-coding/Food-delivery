@@ -6,8 +6,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItem, setCartItem] = useState({});
-
-
+  // const [subTotal,setSubTotal] = useState(null) 
 
   const addToCart = (itemId) => {
     if (!cartItem[itemId]) {
@@ -29,24 +28,28 @@ const StoreContextProvider = (props) => {
     });
   };
   
-
-
-//   const removeFromCart = (itemId) => {
-//     setCartItem((last) => {
-//       const newCart = { ...last };
-//       if (newCart[itemId] > 1) {
-//         newCart[itemId] -= 1;
-//       } else {
-//         delete newCart[itemId];
-//       }
-//       return newCart;
-//     });
-//   };
-
-
-  useEffect(()=>{
-    console.log(cartItem);
-  },[cartItem])
+  // const totalAmount = ()=>{
+  //   let amount =0;
+  //   for (const items  in cartItem) {
+  //     if(cartItem[items]>0){
+  //       let totalamount = food_list.find((pro)=>pro.id===items)
+  //       amount+=totalamount*cartItem[items]
+  //    }
+  //     }
+  //     return amount
+  //   }
+    
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+    for (const item in cartItem) {
+      if (cartItem[item] > 0) {
+        let itemInfo = food_list.find((product) => product.id === item);
+        totalAmount += itemInfo.price * cartItem[item];
+      }
+    }
+    return totalAmount;
+  }
+  
 
   const contextValue = {
     food_list,
@@ -54,6 +57,8 @@ const StoreContextProvider = (props) => {
     addToCart,
     cartItem,
     setCartItem,
+    getTotalCartAmount
+    
   };
   return (
     <StoreContext.Provider value={contextValue}>

@@ -11,3 +11,7 @@
     font-family:Outfit, Tahoma, Geneva, Verdana, sans-serif; 
     scroll-behavior: smooth;
 }
+ hr{
+    background: #000;
+    height: 2px;
+ }
