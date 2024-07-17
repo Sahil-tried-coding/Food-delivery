@@ -18,7 +18,7 @@ function Cart() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (input.toLowerCase() === "hire me") {
+    if (input.toLowerCase() === "hire me" || input === "Hire Me") {
       setDiscountedAmount(getTotalCartAmount() * 0.3);
       setDisplayDiscount(true)
     } else {
