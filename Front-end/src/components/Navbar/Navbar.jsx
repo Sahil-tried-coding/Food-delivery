@@ -113,7 +113,7 @@ function Navbar({ setVisibleForm }) {
           </a>
           
           <div className={
-            getTotalCartAmount()===0?"hidden":"mr-26 h-3 w-3 rounded-full right-[8.7rem] top-[11.2rem] bg-red-600 absolute sm:right-[16.5rem]"
+            getTotalCartAmount()===0?"hidden":"mr-26 h-3 w-3 rounded-full right-[8.6rem] top-[11.2rem] bg-red-600 absolute sm:right-[16.5rem]"
           }></div>
           <a href="#form">
             <button
