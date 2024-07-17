@@ -50,18 +50,18 @@ function FoodItem({ name, id, category, price, desc, img }) {
 
 
 // -------------------------------------------------------------------------
-    <div className="w-[21rem] rounded-2xl my-6 h-[25rem]  border-2 border-black">
+    <div className="w-[20rem] rounded-2xl my-6 h-[25rem]  border-2 border-black">
       <div>
-        <img className="w-full  h-[13rem] " src={img} />
+        <img className="w-full  h-[13rem] rounded-2xl " src={img} />
       </div>
       {!cartItem[id] ? (
         <img
-          className="ml-[16rem] -mt-12 h-12 cursor-pointer  "
+          className="ml-[16rem] -mt-12 h-12  cursor-pointer  "
           onClick={() => addToCart(id)}
           src={assets.add_icon_white}
         />
       ) : (
-        <div className="flex cursor-pointer absolute bg-white items-center -mt-14 ml-[12.5rem] gap-3 w-[130px] p-2 rounded-full">
+        <div className="flex cursor-pointer absolute bg-white items-center -mt-14 ml-[11.6rem] gap-3 w-[130px] p-2 rounded-full">
           <img
             className="h-8 "
             onClick={() => removeFromCart(id)}

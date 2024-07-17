@@ -6,8 +6,8 @@ function Place_order() {
     const{getTotalCartAmount}=useContext(StoreContext)
     const navigate = useNavigate();
   return (
-    <div className="w-full sm:gap-10 sm:space-x-[10rem] sm:flex-row flex flex-col gap-10  max-h-max my-20">
-      <div className="w-[45%">
+    <div className="w-full  sm:gap-10 sm:space-x-[10rem] sm:flex-row flex flex-col gap-10  max-h-max my-20">
+      <div className=" ">
         <h1 className="text-2xl font-bold text-center my-5">
           Delivery information
         </h1>
