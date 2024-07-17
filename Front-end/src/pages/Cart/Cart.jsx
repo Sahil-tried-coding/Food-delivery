@@ -43,7 +43,7 @@ function Cart() {
             <div className="pt-[8rem] sm:pt-[5rem] max-h-max w-full">
               <div className="flex sm:justify-around gap-10 py-5">
                 <p className="text-start">Items</p>
-                <div className="flex gap-3 sm:mr-[20rem] ml-6 sm:gap-[8rem]">
+                <div className="flex gap-3 sm:mr-[20rem]  sm:gap-[8rem]">
                   <p>Title</p>
                   <p>Price</p>
                   <div className="sm:gap-14 gap-3 flex">
@@ -59,20 +59,20 @@ function Cart() {
                   if (quantity) {
                     return (
                       <div
-                        className="flex sm:justify-around h-20 py-3 border-b-2 border-black w-[87vw] items-center"
+                        className="flex  sm:justify-around h-20 py-3 border-b-2 border-black w-[87vw] items-center"
                         key={item.id}
                       >
                         <img className="w-12 h-12" src={item.image} alt={item.name} />
-                        <ul className="flex mx-1 mr-4 gap-3 sm:gap-20">
-                          <li className="w-[100px] sm:text-start text-end whitespace-nowrap">
+                        <ul className="flex mx-1 mr-1 gap-3 sm:gap-20">
+                          <li className="w-[80px] sm:text-start text-end whitespace-nowrap">
                             {item.name}
                           </li>
                           <li>${item.price}</li>
-                          <li className="w-[65px] text-center">{quantity}</li>
+                          <li className="w-[55px] text-center">{quantity}</li>
                           <li>${quantity * item.price}</li>
                         </ul>
                         <button
-                          className="text-xl h-7 w-[2rem] font-bold text-right"
+                          className="ml-2 text-xl h-7 w-[2rem] font-bold text-right"
                           onClick={() => removeFromCart(item.id)}
                         >
                           <img className="h-7  w-[2rem]" src={assets.remove_icon_red}/>
